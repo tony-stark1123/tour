@@ -1,0 +1,470 @@
+/* =====================================================
+   Responsive layout for laptop, tablet, and mobile
+   ===================================================== */
+
+/* ---------- Laptop / desktop (default styles already cover this) ---------- */
+@media (max-width: 1200px) {
+  #topbar {
+    padding: 0 14px;
+  }
+
+  #brand .titles .name {
+    font-size: 16px;
+  }
+
+  #sidebar {
+    width: 320px;
+    left: 14px;
+  }
+
+  #sceneTitle {
+    left: 14px;
+    bottom: 16px;
+  }
+
+  #controls {
+    right: 14px;
+    bottom: 16px;
+  }
+
+  #filmstrip {
+    max-width: 360px;
+  }
+}
+
+/* ---------- Hotspot sizing ---------- */
+@media (max-width: 1200px) {
+  :root {
+    --custom-hotspot-size: clamp(24px, 5vw, 48px);
+    --custom-hotspot-video-size: clamp(68px, 18vw, 160px);
+    --custom-hotspot-hit-size: clamp(72px, 18vw, 180px);
+    --custom-hotspot-play-size: clamp(90px, 18vw, 150px);
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --custom-hotspot-size: clamp(22px, 4.8vw, 42px);
+    --custom-hotspot-video-size: clamp(60px, 16vw, 120px);
+    --custom-hotspot-hit-size: clamp(66px, 16vw, 120px);
+    --custom-hotspot-play-size: clamp(90px, 20vw, 140px);
+  }
+
+  .pnlm-hotspot-base.custom-hotspot.play-hotspot {
+    width: clamp(90px, 20vw, 140px) !important;
+    height: clamp(90px, 20vw, 140px) !important;
+  }
+
+  .pnlm-hotspot-base.custom-hotspot.play-hotspot .custom-hotspot-icon {
+    width: clamp(90px, 20vw, 140px) !important;
+    height: clamp(90px, 20vw, 140px) !important;
+  }
+  :root {
+    --custom-hotspot-size: clamp(18px, 4.6vw, 28px);
+    --custom-hotspot-video-size: clamp(46px, 14vw, 96px);
+    --custom-hotspot-hit-size: clamp(52px, 14vw, 100px);
+    --custom-hotspot-play-size: clamp(70px, 18vw, 100px);
+  }
+  #topbar {
+    height: 60px;
+    padding: 0 12px;
+  }
+
+  #brand {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  #brand .logo {
+    height: 34px;
+  }
+
+  #brand .titles .name {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  #brand .titles .sub {
+    letter-spacing: 1.2px;
+    font-size: 10px;
+  }
+
+  #topActions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  #menuToggle,
+  #placeHotspotBtn,
+  #copyHotspotsBtn {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  #sidebar {
+    top: 72px;
+    width: min(340px, calc(100vw - 20px));
+    left: 10px;
+    max-height: calc(100vh - 130px);
+  }
+
+  #sceneList {
+    max-height: calc(100vh - 220px);
+  }
+
+  #sceneTitle {
+    left: 12px;
+    bottom: 88px;
+    padding: 8px 12px;
+  }
+
+  #sceneTitle .title {
+    font-size: 16px;
+  }
+
+  #compass {
+    top: 72px;
+    right: 12px;
+    width: 46px;
+    height: 46px;
+  }
+
+  #campusMap {
+    width: 200px;
+    right: 12px;
+    bottom: 145px;
+  }
+
+  #mapToggle {
+    width: 52px;
+    height: 52px;
+    right: 12px;
+    bottom: 82px;
+  }
+
+  #mapToggle img {
+    width: 28px;
+    height: 28px;
+  }
+
+  #filmstrip {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    transform: none;
+    width: auto;
+    max-width: none;
+    max-height: 96px;
+    padding: 7px;
+  }
+
+  #filmstrip img {
+    width: 116px;
+    height: 72px;
+  }
+
+  .loading-title {
+    font-size: 22px;
+    padding: 0 18px;
+  }
+
+  .loading-sub {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) {
+  .pnlm-hotspot-base.custom-hotspot.play-hotspot {
+    width: clamp(90px, 20vw, 140px) !important;
+    height: clamp(90px, 20vw, 140px) !important;
+  }
+
+  .pnlm-hotspot-base.custom-hotspot.play-hotspot .custom-hotspot-icon {
+    width: clamp(90px, 20vw, 140px) !important;
+    height: clamp(90px, 20vw, 140px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --custom-hotspot-size: clamp(40px, 10vw, 68px);
+    --custom-hotspot-video-size: clamp(100px, 24vw, 180px);
+    --custom-hotspot-hit-size: clamp(110px, 24vw, 180px);
+    --custom-hotspot-play-size: clamp(120px, 28vw, 170px);
+  }
+
+  html, body {
+    overflow: hidden;
+  }
+
+  .pnlm-hotspot-base.custom-hotspot.play-hotspot {
+    width: clamp(120px, 28vw, 170px) !important;
+    height: clamp(120px, 28vw, 170px) !important;
+  }
+
+  .pnlm-hotspot-base.custom-hotspot.play-hotspot .custom-hotspot-icon {
+    width: clamp(120px, 28vw, 170px) !important;
+    height: clamp(120px, 28vw, 170px) !important;
+  }
+
+  #topbar {
+    height: 68px;
+    padding: 0 10px;
+    align-items: center;
+  }
+
+  #brand {
+    gap: 8px;
+    max-width: calc(100% - 130px);
+  }
+
+  #brand .logo {
+    height: 40px;
+  }
+
+  #brand .titles {
+    min-width: 0;
+  }
+
+  #brand .titles .name {
+    display: none;
+  }
+
+  #brand .titles .sub {
+    letter-spacing: 1.2px;
+    font-size: 15px;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+
+  #topActions {
+    gap: 4px;
+    width: auto;
+    max-width: 72px;
+    justify-content: flex-end;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  #placeHotspotBtn,
+  #copyHotspotsBtn {
+    display: none;
+  }
+
+  #menuToggle {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: 0;
+    gap: 0;
+    justify-content: center;
+    border-radius: 7px;
+    color: var(--stone-100);
+  }
+
+  #menuToggle .menu-label {
+    display: none;
+  }
+
+  #menuToggle svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    color: currentColor;
+  }
+
+  #sidebar {
+    top: 72px;
+    left: 50%;
+    width: min(88vw, 360px);
+    max-height: 62vh;
+    height: auto;
+    border-radius: 16px;
+    transform: translate(-50%, -18px);
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+  }
+
+  #sidebar.open {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #sidebar .eyebrow {
+    padding: 8px 16px 10px;
+  }
+
+  #sceneList {
+    max-height: calc(62vh - 90px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .search-box {
+    padding: 0 12px 12px;
+  }
+
+  .scene-item {
+    padding: 8px 12px;
+  }
+
+  .scene-item img {
+    width: 48px;
+    height: 36px;
+  }
+
+  .scene-title {
+    font-size: 13px;
+  }
+
+  .category-header {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  #sceneTitle {
+    left: 10px;
+    bottom: 25px;
+    max-width: calc(100vw - 20px);
+    padding: 8px 12px;
+  }
+
+  #sceneTitle .eyebrow {
+    font-size: 9px;
+  }
+
+  #sceneTitle .title {
+    font-size: 15px;
+  }
+
+  #controls {
+    right: 12px;
+    bottom: 25px;
+    gap: 6px;
+    justify-content: flex-end;
+    max-width: calc(100vw - 28px);
+    transform: translateX(-3px);
+  }
+
+  #controls button {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  #compass,
+  .pnlm-compass {
+    display: none !important;
+  }
+
+  #campusMap {
+    width: min(200px, calc(100vw - 20px));
+    right: 10px;
+    bottom: 140px;
+  }
+
+  #mapToggle {
+    width: 52px;
+    height: 52px;
+    right: 10px;
+    bottom: 72px;
+  }
+
+  #filmstrip {
+    display: none;
+  }
+
+  .pnlm-hotspot.custom-hotspot video[src*="rd_arrow.webm"],
+  .pnlm-hotspot.custom-hotspot .custom-hotspot-video[src*="rd_arrow.webm"] {
+    width: 170px !important;
+    height: 170px !important;
+  }
+
+  .loading-logo {
+    width: 72px;
+  }
+
+  .loading-title {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .loader-bar {
+    width: 180px;
+  }
+}
+
+/* ---------- Very small mobile ---------- */
+@media (max-width: 480px) {
+  #topbar {
+    padding: 0 8px;
+  }
+
+  #brand {
+    max-width: calc(100% - 110px);
+  }
+
+  #brand .titles .name {
+    font-size: 11px;
+  }
+
+  #brand .titles .sub {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+
+  #topActions {
+    gap: 3px;
+  }
+
+  #menuToggle,
+  #placeHotspotBtn,
+  #copyHotspotsBtn {
+    padding: 6px 7px;
+    font-size: 9px;
+  }
+
+  #sceneTitle {
+    bottom: 25px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+  }
+
+  #controls {
+    right: 20px;
+    bottom: 33px;
+  }
+
+  #mapToggle {
+    right: 8px;
+    bottom: 68px;
+  }
+
+  #campusMap {
+    right: 8px;
+    bottom: 132px;
+  }
+
+  #filmstrip {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+  }
+
+  #filmstrip img {
+    width: 82px;
+    height: 54px;
+  }
+}
