@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Campus Tour</title>
+
+  <!-- Pannellum library (the 360° viewer engine) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- YOUR files -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN -->
+<div id="loading">
+
+    <img
+        src="assets/icons/karunya-logo.png"
+        class="loading-logo"
+        alt="Karunya Logo">
+
+    <div class="loading-title">
+        Karunya Institute of Technology and Sciences
+    </div>
+
+    <div class="loading-sub">
+        Virtual Campus Tour
+    </div>
+
+    <div class="loader-bar">
+        <span></span>
+    </div>
+
+</div>
+
+<!-- ================= TOP BAR ================= -->
+<div id="topbar">
+
+    <!-- Left Side -->
+    <div id="brand">
+
+        <img
+            src="assets/icons/karunya-logo.png"
+            alt="Karunya University"
+            class="logo">
+
+        <div class="titles">
+            <div class="name">
+                Karunya Institute of Technology and Sciences
+            </div>
+
+            <div class="sub">
+                Virtual Campus Tour
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div id="topActions">
+
+      <button id="placeHotspotBtn" title="Place Hotspot">Place Hotspot</button>
+      <button id="copyHotspotsBtn" title="Copy JSON">Copy JSON</button>
+      <button id="menuToggle" aria-label="Campus Map" title="Campus Map">
+        <svg viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2">
+
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+
+        </svg>
+
+        <span class="menu-label">Campus Map</span>
+      </button>
+
+    </div>
+
+</div>
+
+  <!-- SIDEBAR (filled in automatically by app.js) -->
+<div id="sidebar">
+
+    <div class="eyebrow">
+        Campus Locations
+    </div>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchScene"
+            placeholder="Search location...">
+
+    </div>
+
+    <div id="sceneList"></div>
+
+</div>
+
+  <!-- 360° VIEWER — Pannellum attaches here -->
+  <div id="panorama"></div>
+
+  <!-- Scene title overlay -->
+  <div id="sceneTitle">
+    <div class="eyebrow">Now Viewing</div>
+    <div class="title" id="sceneTitleText">Room 1</div>
+  </div>
+
+  <!-- Compass -->
+  <div id="compass">
+    <div class="needle" id="compassNeedle"></div>
+  </div>
+
+  <!-- Custom controls -->
+  <div id="controls">
+    <button id="btnZoomIn" title="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M21 21l-4.3-4.3M11 8v6M8 11h6" />
+      </svg></button>
+    <button id="btnZoomOut" title="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M21 21l-4.3-4.3M8 11h6" />
+      </svg></button>
+    <button id="btnFullscreen" title="Fullscreen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" />
+      </svg></button>
+  </div>
+
+  <!-- Bottom thumbnail filmstrip (filled in automatically by app.js) -->
+  <div id="filmstrip"></div>
+
+<!-- Floating Campus Map -->
+<!-- <div id="campusMap">
+
+    <div class="map-header">
+        🗺 Campus Map
+    </div>
+
+    <div id="mapContainer">
+
+        <img
+            id="mapImage"
+            src="assets/map/map.jpg"
+            alt="Campus Map">
+
+    </div>
+
+</div> -->
+
+<!-- Floating Map Toggle -->
+<!-- <button id="mapToggle">
+
+    <img src="assets/icons/google-maps.png" alt="Campus Map">
+
+</button> -->
+
+  <!-- YOUR files — data.js MUST load before app.js -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
